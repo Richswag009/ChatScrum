@@ -1,15 +1,19 @@
 import React, { Component } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./Components/Login/SignUp";
 import SignIn from "./Components/Login/SignIn";
+import Home from "./Components/Home/Home";
 
 export class App extends Component {
   render() {
     return (
-      <div>
-        <h1 className="text-center text-3xl mt-4"> ChatScrum </h1>
-        <SignUp />
-        <SignIn />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/Signin" element={<SignIn />} />
+          <Route path="/Signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     );
   }
 }
