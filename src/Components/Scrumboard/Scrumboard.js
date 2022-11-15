@@ -1,17 +1,18 @@
 import React from "react";
 import { useState } from "react";
+import Task from "../Task/Task";
 
 const Scrumboard = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [tasks, setTasks] = useState("");
+  //   const [tasks, setTasks] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsOpen(false);
   };
-  const handleChange = (e) => {
-    setTasks(e.target.value);
-  };
+  //   const handleChange = (e) => {
+  //     setTasks(e.target.value);
+  //   };
 
   return (
     <div>
@@ -25,24 +26,10 @@ const Scrumboard = () => {
 
       <p>Hello liam nussie, Welcome to your dashboard</p>
 
-      <div className="item-container">
-        <div className=" w-[300px] h-[350px] border shadow-slate-500">
-          <h1 className="text-center py-3 font-bold bg-gray-400">
-            {" "}
-            Weekly Tasks
-          </h1>
-          <p className="border-">{tasks}</p>
-        </div>
-        <div className=" w-[300px] h-[350px] border shadow-slate-500">
-          <h1 className="text-center py-3 font-bold bg-gray-400">
-            {" "}
-            Daily Tasks
-          </h1>
-        </div>
-      </div>
+      <Task />
 
       {isOpen && (
-        <div className="modal absolute left-1/4 bottom-60 bg-white border w-[320px]">
+        <div className="modal absolute left-1/4 bottom-1/3 bg-white border w-[320px]">
           <div className="flex flex-row text-white justify-between bg-blue-900">
             <h2 className="pl-1 pt-1">Add a new task</h2>
             <h3
@@ -56,7 +43,7 @@ const Scrumboard = () => {
             <input
               type="text"
               className="border h-[40px] w-full px-1"
-              onChange={handleChange}
+              //   onChange={handleChange}
             />{" "}
             <br />
             <button className="px-3 py-2  my-3 font-bold tracking-widest uppercase border-2 border-blue-100   hover:bg-blue-600 hover:text-white">
