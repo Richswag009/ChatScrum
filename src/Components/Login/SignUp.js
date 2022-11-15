@@ -64,13 +64,23 @@ const SignUp = () => {
             <option value="Owner"> Owner</option>
           </select>
         </div>
-        <button className=" cursor-pointer text-white border w-fit my-3 py-2 px-3 rounded-lg bg-blue-700">
-          {" "}
-          Sign Up
-        </button>
+        <div className=" flex flex-row align-middle justify-between">
+          <button className=" cursor-pointer text-white border w-fit my-3 py-2 px-3 rounded-lg bg-blue-700">
+            {" "}
+            Login Up
+          </button>
+          <p className="mt-2 ">
+            Have an account <br /> already?? <Link to="/Signin">Sign in</Link>{" "}
+          </p>
+        </div>
       </form>
+
       <p>
-        Have an account already?? <Link to="/Signin">Sign in</Link>
+        <Link to="/">
+          {" "}
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back to
+          home
+        </Link>
       </p>
     </div>
   );
